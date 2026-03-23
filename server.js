@@ -1,12 +1,14 @@
-const express = require("express");
+const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
 const port = 3000;
 
-// middleware 
+// middleware
 app.use(bodyParser.json());
 
 app.listen(port, () => {
-    console.log(`Server listening on port ${port} and startting at https://localhost:${port}`)
+    console.log(
+        `Server listening on port ${port} and startting at https://localhost:${port}`
+    );
 });
