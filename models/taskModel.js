@@ -1,20 +1,20 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const taskSchema = mongoose.Schema({
     description: {
         type: String,
-        require: true
-    }, 
+        required: true,
+    },
     completed: {
         type: Boolean,
-        default: false
+        default: false,
     },
     createBy: {
-        type: mongoose.Schema.Types.ObjectId, 
-        ref: 'User'
-    }
-})
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+    },
+});
 
-const User = mongoose.model('Task', taskSchema);
+const Task = mongoose.model('Task', taskSchema);
 
-export default User;
+export default Task;
