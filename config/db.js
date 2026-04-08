@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
-const URI =
-    'mongodb+srv://ageenko01114444_db_user:ENIxRCsN2iENTS2u@cluster0.u5izn6g.mongodb.net/?appName=Cluster0';
+import 'dotenv/config'
+
+const URI = process.env.MONGODB_URI;
 
 mongoose
     .connect(URI)
@@ -10,3 +11,4 @@ mongoose
     .catch((e) => {
         console.error(e);
     });
+
